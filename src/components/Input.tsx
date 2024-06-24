@@ -30,7 +30,7 @@ const Input: React.FC<InputProps> = ({ onSend, loading }) => {
           ref={textareaRef}
           value={text}
           onChange={(e) => setText(e.target.value)}
-					className='p-2 border border-gray-200 rounded resize-none overflow-hidden max-h-[50vh] focus:outline-none' // Добавлен класс focus:outline-none
+					className='text-zinc-400 p-2 border border-gray-200 rounded resize-none overflow-hidden max-h-[50vh] focus:outline-none'
           placeholder='📝 🙏'
           rows={1}
         />

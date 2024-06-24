@@ -40,7 +40,7 @@ export default function Home() {
     <main className='flex min-h-screen items-center justify-center bg-rainbow-gradient'>
       <div className='container mx-auto p-4'>
         <h1 className='text-2xl font-bold text-center mb-4'>
-          🌐📲🔤{' '}
+          🌐 📲 🔤{' '}
           <Link
             href='https://github.com/seygorin'
             target='_blank'
@@ -52,7 +52,7 @@ export default function Home() {
           >
             ✍️
           </Link>{' '}
-          ♊
+          ♊{' '}
           <span
             style={{
               background:
@@ -61,8 +61,8 @@ export default function Home() {
               WebkitTextFillColor: 'transparent',
             }}
           >
-            -1.5-
-          </span>
+            -1.5 -
+          </span>{' '}
           ⚡
         </h1>
         <Input onSend={fetchData} loading={loading} />
