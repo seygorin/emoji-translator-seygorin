@@ -1,7 +1,6 @@
-// components/Loading.tsx
 const Loading: React.FC = () => {
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center my-4">
       <svg
         className="animate-spin h-8 w-8"
         xmlns="http://www.w3.org/2000/svg"

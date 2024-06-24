@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Emoji Translator (😜📲🌐)
 
-## Getting Started
+Emoji Translator is a web application that translates text from human language to emoji language. (🌐➡️😊 📝➡️😊 🌐.)
 
-First, run the development server:
+## Features (✨)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Text to Emoji Translation**: Translate any human language into (`emotion`) its emoji representation. (📝➡️😊: 🌐💬➡️😊)
+- **Responsive Design**: Adaptable layout for various screen sizes. (📱💻: 📏🔄)
+- **Dark Mode**: Toggle between light and dark themes for better user experience. (🌞🌚: 🔄💡🌚)
+
+
+## Technologies Used (💻)
+- Next.js: A React framework for server-rendered or statically exported React applications. (⚛️📄: 🌐🔄💻)
+- Gemini 1.5 Flash: A powerful generative AI model for text processing and translation. (🤖⚡: 🌐💬➡️😊)
+- Tailwind CSS: A utility-first CSS framework for rapid UI development. (🎨🛠️: 📐📏)
+
+## Getting Started (🚀)
+
+### Prerequisites (📝)
+- Node.js (v12.0.0 or higher)
+- npm (v6.0.0 or higher) or yarn
+
+## Installation (📥)
+
+Clone the repository:
+
+```
+https://github.com/seygorin/emoji-translator-seygorin.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage (🕹️)
+ 
+- Enter Text: Type or paste your text into the input field. (📝➡️🔤: ✍️📄📥.)
+- Translate: Click the "📤 ➡️" button to translate the text to emoji language. (➡️😀: 👆📤➡️.)
+- Copy Result: Click the "📋" button to copy the translated emoji text to your clipboard. (📋: 👆📋.)
+- Toggle Theme: Use the theme toggle button in the bottom left corner to switch between light and dark modes. (🎨💡/🌚: 👇 👈 🔄.)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

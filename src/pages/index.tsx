@@ -1,7 +1,6 @@
-// pages/index.tsx
 'use client'
 
-import {useState} from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Input from '../components/Input'
 import Output from '../components/Output'
@@ -10,6 +9,19 @@ import Loading from '../components/Loading'
 export default function Home() {
   const [data, setData] = useState('')
   const [loading, setLoading] = useState(false)
+  const [isDarkMode, setIsDarkMode] = useState(false)
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.style.setProperty('--foreground-rgb', '255, 255, 255')
+      document.documentElement.style.setProperty('--background-start-rgb', '0, 0, 0')
+      document.documentElement.style.setProperty('--background-end-rgb', '0, 0, 0')
+    } else {
+      document.documentElement.style.setProperty('--foreground-rgb', '0, 0, 0')
+      document.documentElement.style.setProperty('--background-start-rgb', '214, 219, 220')
+      document.documentElement.style.setProperty('--background-end-rgb', '255, 255, 255')
+    }
+  }, [isDarkMode])
 
   const fetchData = async (text: string) => {
     setLoading(true)
@@ -19,7 +31,7 @@ export default function Home() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({prompt: text}),
+        body: JSON.stringify({ prompt: text }),
       })
 
       if (!res.ok) {
@@ -36,8 +48,12 @@ export default function Home() {
     }
   }
 
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode)
+  }
+
   return (
-    <main className='flex min-h-screen items-center justify-center bg-rainbow-gradient'>
+    <main className='relative flex min-h-screen items-center justify-center bg-rainbow-gradient'>
       <div className='container mx-auto p-4'>
         <h1 className='text-2xl font-bold text-center mb-4'>
           🌐 📲 🔤{' '}
@@ -65,10 +81,16 @@ export default function Home() {
           </span>{' '}
           ⚡
         </h1>
+
         <Input onSend={fetchData} loading={loading} />
         <div className='min-h-[100px]'>
           {loading ? <Loading /> : <Output data={data} />}
         </div>
+      </div>
+      <div className='absolute bottom-4 left-4'>
+        <button onClick={toggleTheme} className='p-2 bg-transparent'>
+          {isDarkMode ? '☀️' : '🌙'}
+        </button>
       </div>
     </main>
   )

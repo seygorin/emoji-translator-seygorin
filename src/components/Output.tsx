@@ -19,7 +19,7 @@ const Output: React.FC<OutputProps> = ({ data }) => {
   };
 
   return (
-    <div className='bg-transparent max-w-md mx-auto my-4 p-4 border border-gray-200 rounded relative bg-gray-100 shadow-md'>
+    <div className='bg-transparent max-w-md mx-auto my-4 p-4 border border-red-200 rounded relative shadow-sm'>
       <div className='pr-16 whitespace-pre-wrap break-words min-h-6'>
         <div ref={outputRef}>
           {data}
@@ -27,7 +27,7 @@ const Output: React.FC<OutputProps> = ({ data }) => {
       </div>
       <button
         onClick={handleCopy}
-        className='absolute top-2 right-2 p-2 bg-transparent text-gray-700 rounded hover:bg-blue-100'
+        className='absolute top-2 right-2 p-2 bg-transparent rounded hover:bg-blue-100'
       >
         📋
       </button>
