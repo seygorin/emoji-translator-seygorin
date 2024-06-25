@@ -103,7 +103,7 @@ export default function Home() {
             {loading ? <Loading /> : <Output data={data} />}
           </div>
         </div>
-        <div className='absolute bottom-4 left-4'>
+        <div className='absolute top-4 right-4'>
           <button onClick={toggleTheme} className='p-2 bg-transparent'>
             {isDarkMode ? '☀️' : '🌙'}
           </button>
