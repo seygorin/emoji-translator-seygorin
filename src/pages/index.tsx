@@ -68,7 +68,7 @@ export default function Home() {
   }
 
   return (
-    <main className='relative flex min-h-screen items-center justify-center bg-rainbow-gradient'>
+    <main className='flex min-h-dvh items-center justify-center bg-rainbow-gradient'>
       <div className='container mx-auto p-4 h-full flex flex-col justify-between'>
         <div className='flex-grow'>
           <h1 className='text-2xl font-bold text-center mb-4'>

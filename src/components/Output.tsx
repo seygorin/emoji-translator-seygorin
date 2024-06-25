@@ -23,7 +23,7 @@ const Output: React.FC<OutputProps> = ({data}) => {
   }
 
   return (
-    <div className='bg-transparent max-w-md mx-auto my-4 p-4 border border-red-200 rounded relative shadow-sm h-[40vh] overflow-y-auto'>
+    <div className='bg-transparent max-w-md mx-auto my-4 p-4 border border-red-200 rounded relative shadow-sm max-h-[40vh] overflow-y-auto'>
       <div className='pr-11 whitespace-pre-wrap break-words min-h-6'>
         <div ref={outputRef}>{data}</div>
       </div>
