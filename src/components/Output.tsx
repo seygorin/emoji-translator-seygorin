@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 interface OutputProps {
   data: string;
@@ -6,11 +6,14 @@ interface OutputProps {
 
 const Output: React.FC<OutputProps> = ({ data }) => {
   const outputRef = useRef<HTMLDivElement>(null);
+  const [buttonText, setButtonText] = useState('📋');
 
   const handleCopy = () => {
     if (outputRef.current) {
       navigator.clipboard.writeText(data)
         .then(() => {
+          setButtonText('👌');
+          setTimeout(() => setButtonText('📋'), 1000);
         })
         .catch((err) => {
           console.error('Could not copy text: ', err);
@@ -29,7 +32,7 @@ const Output: React.FC<OutputProps> = ({ data }) => {
         onClick={handleCopy}
         className='absolute top-2 right-2 p-2 bg-transparent rounded hover:bg-blue-100'
       >
-        📋
+        {buttonText}
       </button>
     </div>
   );
