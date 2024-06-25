@@ -33,7 +33,7 @@ const Input: React.FC<InputProps> = ({onSend, loading}) => {
             ref={textareaRef}
             value={text}
             onChange={(e) => setText(e.target.value)}
-            className='text-zinc-400 p-4 border border-gray-200 rounded resize-none overflow-hidden max-h-[50vh] focus:outline-none shadow w-full'
+            className='text-zinc-400 p-4 pr-11 rounded resize-none max-h-[40vh] focus:outline-none shadow w-full'
             placeholder='📝 🙏'
             rows={1}
           />
@@ -41,7 +41,7 @@ const Input: React.FC<InputProps> = ({onSend, loading}) => {
             <button
               type='button'
               onClick={handleClear}
-              className='absolute top-2 right-2 flex items-center justify-center  p-2 bg-transparent rounded hover:bg-blue-100'
+              className='absolute top-2 right-4 flex items-center justify-center p-2 bg-transparent rounded hover:bg-blue-100'
             >
               ❌
             </button>
